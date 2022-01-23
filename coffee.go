@@ -7,6 +7,10 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+var PluginName = "coffee"
+var PluginVersion = ""
+var PluginBuilddate = ""
+
 var messages = []string{"moin", "hi", "morgen", "morgn", "guten morgen", "servus", "servas", "dere", "oida", "porst", "prost"}
 
 func Start(discord *discordgo.Session) {
