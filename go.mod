@@ -1,6 +1,6 @@
 module github.com/toksikk/gbp-coffee
 
-go 1.17
+go 1.18
 
 require (
 	github.com/bwmarrin/discordgo v0.23.2
