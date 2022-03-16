@@ -1,7 +1,7 @@
 VERSION=`git describe --tags`
 BUILDDATE=`date +%FT%T%z`
 BUILDMODE=-buildmode=plugin
-LDFLAGS=-ldflags="-X 'github.com/toksikk/main.Version=${VERSION}' -X 'github.com/toksikk/main.Builddate=${BUILDDATE}'"
+LDFLAGS=-ldflags="-X 'main.PluginVersion=${VERSION}' -X 'main.PluginBuilddate=${BUILDDATE}'"
 
 PLATFORMS := linux/amd64 linux/arm64 linux/386 linux/arm darwin/amd64
 
