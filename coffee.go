@@ -11,7 +11,7 @@ var PluginName = "coffee"
 var PluginVersion = ""
 var PluginBuilddate = ""
 
-var messages = []string{"moin", "hi", "morgen", "morgn", "guten morgen", "servus", "servas", "dere", "oida", "porst", "prost", "grias di", "gude", "Spinotwachtldroha", "scheipi", "heisl", "gschissana", "christkindl"}
+var messages = []string{"moin", "hi", "morgen", "morgn", "guten morgen", "servus", "servas", "dere", "oida", "porst", "prost", "grias di", "gude", "spinotwachtldroha", "scheipi", "heisl", "gschissana", "christkindl"}
 
 func Start(discord *discordgo.Session) {
 	discord.AddHandler(onMessageCreate)
