@@ -25,4 +25,4 @@ pre-release:
 
 release: pre-release $(PLATFORMS) ## 📦 Build for GitHub release
 $(PLATFORMS):
-	GOOS=$(os) GOARCH=$(arch) go build ${BUILDMODE} -o ./lib/release/coffee-$(os)-$(arch).so ./*.go
+	GOOS=$(os) GOARCH=$(arch) go build ${BUILDMODE} -o ./lib/release/coffee-$(os)-$(arch).so ${LDFLAGS} ./*.go
