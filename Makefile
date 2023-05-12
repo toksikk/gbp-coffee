@@ -13,6 +13,10 @@ arch = $(word 2, $(temp))
 help:  ## 🤔 Show help messages
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
 
+update: ## 🔄 Update dependencies
+	go mod tidy
+	go get -u
+
 build: ## 🚧 Build for local arch
 	mkdir -p ./lib
 	go build ${BUILDMODE} -o ./lib/coffee.so ${LDFLAGS} ./*.go
