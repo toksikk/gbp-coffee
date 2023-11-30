@@ -1,4 +1,4 @@
-package coffee
+package gbpcoffee
 
 import (
 	"strings"
