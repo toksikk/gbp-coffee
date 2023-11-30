@@ -1,4 +1,4 @@
-package main
+package coffee
 
 import (
 	"strings"
@@ -7,12 +7,18 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-var PluginName = "coffee"
-var PluginVersion = ""
-var PluginBuilddate = ""
-
 var messages = []string{"moin", "hi", "morgen", "morgn", "guten morgen", "servus", "servas", "dere", "oida", "porst", "prost", "grias di", "gude", "spinotwachtldroha", "scheipi", "heisl", "gschissana", "christkindl"}
 
+// PluginName is the name of the plugin
+var PluginName = "coffee"
+
+// PluginVersion is the version of the plugin, set by the compiler
+var PluginVersion = ""
+
+// PluginBuilddate is the builddate of the plugin, set by the compiler
+var PluginBuilddate = ""
+
+// Start the plugin
 func Start(discord *discordgo.Session) {
 	discord.AddHandler(onMessageCreate)
 }
